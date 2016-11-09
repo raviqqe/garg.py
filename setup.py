@@ -13,15 +13,15 @@ def main():
     readme = f.read()
 
   setuptools.setup(
-    name="garg",
+    name="gargparse",
     version="0.0.1",
     description="Global argparse parser",
     long_description=readme,
     license="Public Domain",
     author="Yota Toyama",
     author_email="raviqqe@gmail.com",
-    url="http://github.com/raviqqe/garg.py/",
-    py_modules=["garg"],
+    url="http://github.com/raviqqe/gargparse.py/",
+    py_modules=["gargparse"],
     classifiers=[
       "Development Status :: 3 - Alpha",
       "Intended Audience :: Developers",
