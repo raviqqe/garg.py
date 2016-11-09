@@ -17,7 +17,7 @@ def main():
 
   setuptools.setup(
     name="gargparse",
-    version="0.0.1",
+    version="0.0.2",
     description="Global argparse parser",
     long_description=readme,
     license="Public Domain",
