@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import distutils.core
+import shutil
 import sys
 
 
@@ -9,6 +10,8 @@ if not sys.version_info[0] >= 3:
 
 
 def main():
+  shutil.copy("README.rst", "README")
+
   with open("README.rst") as f:
     readme = f.read()
 
