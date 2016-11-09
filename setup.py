@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import distutils.core
+import setuptools
 import shutil
 import sys
 
@@ -15,7 +15,7 @@ def main():
   with open("README.rst") as f:
     readme = f.read()
 
-  distutils.core.setup(
+  setuptools.setup(
     name="gargparse",
     version="0.0.1",
     description="Global argparse parser",
