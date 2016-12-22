@@ -1,7 +1,8 @@
 import argparse
 
 
-_PARSER = argparse.ArgumentParser()
+_PARSER = argparse.ArgumentParser(
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 _ARGS = None
 
 
