@@ -1,6 +1,18 @@
+VENV_DIR = '.venv'
+
+
+def vsh *args, **kwargs
+  sh([". #{VENV_DIR}/bin/activate &&", *args.map{ |x| x.to_s }].join(' '),
+     **kwargs)
+end
+
+
 task :test do
+  sh "python3 -m venv #{VENV_DIR}" unless File.directory? VENV_DIR
+  vsh 'python3 setup.py install'
+
   Dir.glob('test/*.py').each do |file|
-    sh 'python3', file, '-h'
+    vsh "python3 #{file} -h"
   end
 end
 
