@@ -1,0 +1,11 @@
+dist: trusty
+
+language: python
+
+addons:
+  apt:
+    packages:
+      ruby
+
+script:
+  rake test
