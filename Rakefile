@@ -14,6 +14,8 @@ task :test do
   Dir.glob('test/*.py').each do |file|
     vsh "python3 #{file} -h"
   end
+
+  vsh "python3 test/overwrite.py foo"
 end
 
 
