@@ -12,7 +12,7 @@ class _Args:
         global _ARGS
 
         if _ARGS == None:
-            _ARGS = parse_args()
+            _ARGS = _PARSER.parse_args()
 
         return getattr(_ARGS, name)
 
@@ -24,4 +24,5 @@ def add_argument(*args, **kwargs):
 
 
 def parse_args(*args, **kwargs):
-    return _PARSER.parse_args(*args, **kwargs)
+    global _ARGS
+    _ARGS = _PARSER.parse_args(*args, **kwargs)
