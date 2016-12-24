@@ -15,7 +15,9 @@ task :test do
     vsh "python3 #{file} -h"
   end
 
-  vsh "python3 test/overwrite.py foo"
+  vsh 'python3 test/default.py'
+  vsh 'python3 test/overwrite.py foo'
+  vsh 'python3 test/simple.py foo'
 end
 
 
